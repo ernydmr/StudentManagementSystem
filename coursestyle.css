@@ -1,0 +1,304 @@
+/* General Style */
+body {
+    /* Basic styling for the entire page */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+}
+
+header, nav, main, footer {
+    /* Styling for main layout components */
+    margin: 20px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+header {
+    /* Styling for the header section */
+    text-align: center;
+    background-color: #176B87;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Navigation Style */
+nav ul {
+    /* Styling for the navigation menu */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #176B87;
+    border-radius: 10px;
+}
+
+nav a {
+    /* Styling for navigation links */
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    /* Hover effect for navigation links */
+    background-color: #FFA500;
+    color: black;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5);
+    transform: scale(1.1) rotate(1deg);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Main Style */
+main {
+    /* Styling for the main content section */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+/* Footer Style - Styling for the footer section */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #176B87; /* Dark blue footer background */
+    color: #fff; /* White text color */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Form Style */
+form {
+    /* Styling for forms */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+label {
+    /* Styling for form labels */
+    font-weight: bold;
+}
+
+button {
+    /* Styling for buttons */
+    padding: 10px;
+    background-color: #808080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    /* Hover effect for buttons */
+    background-color: #696969;
+}
+
+/* Course List Style */
+#lectureList {
+    /* Styling for the course list section */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Add Student and Grades to Course Style */
+.selectLecture {
+    /* Styling for lecture selection dropdown */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#gradeSystemInput {
+    /* Styling for grade system selection dropdown */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.studentListContainer {
+    /* Styling for the student list container */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Student Table Style */
+.studentList table {
+    /* Styling for the student table */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.studentList th, .studentList td {
+    /* Styling for table headers and cells */
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.studentList th {
+    /* Styling for table header cells */
+    background-color: #176B87;
+    color: #fff;
+}
+
+.studentList tr:hover {
+    /* Hover effect for table rows */
+    background-color: #FFA500;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5);
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Responsive styling for smaller screens */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Adjust form for smaller screens */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+/* Button styling for smaller screens */
+form button {
+    grid-column: span 2;
+    width: 100%;
+    padding: 10px;
+    background-color: #808080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    /* Hover effect for buttons on smaller screens */
+    background-color: #FFA500;
+    box-shadow: 0 8px 16px rgba(105, 105, 105, 0.5);
+    transform: scale(1.1);
+}
+
+/* List Button styling */
+button.listButton {
+    width: 100%;
+    padding: 15px; /* Increase padding for a larger button */
+    background-color: #808080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+button.listButton:hover {
+    /* Hover effect for list buttons */
+    background-color: #FFA500;
+    color: black;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5);
+    transform: scale(1.1);
+}
+
+/* Student Name Filter input style */
+label[for="studentNameFilter"] {
+    /* Styling for the student name filter label */
+    margin-top: 10px; /* Add space between the button and the input */
+}
+
+input#studentNameFilter {
+    /* Styling for the student name filter input */
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.courseListContainer {
+    /* Styling for the course list container */
+    margin-top: 20px;
+}
+
+#courseTable {
+    /* Styling for the course table */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#courseTable th, #courseTable td {
+    /* Styling for table headers and cells in the course table */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#courseTable th {
+    /* Styling for table header cells in the course table */
+    background-color: #176B87;
+    color: #fff;
+}
+
+#courseTable tr:hover {
+    /* Hover effect for table rows in the course table */
+    background-color: #FFA500;
+}
+
+/* GPA Calculator Container Style */
+#gpaCalculatorContainer {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* GPA Calculator Labels Style */
+#gpaCalculatorContainer label {
+    /* Styling for labels inside the GPA calculator container */
+    font-weight: bold;
+    margin-top: 10px;
+    display: block; /* Add space between labels */
+}
+
+/* GPA Calculator Dropdown Style */
+#gpaCalculatorContainer select {
+    /* Styling for dropdowns inside the GPA calculator container */
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* GPA Calculator Button Style */
+#gpaCalculatorContainer button {
+    padding: 10px;
+    width: 100%;
+    background-color: #808080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#gpaCalculatorContainer button:hover {
+    background-color: #FFA500;
+    color: black;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5);
+    transform: scale(1.1) rotate(1deg);
+    transition: background-color 1s ease, color 1s ease, box-shadow 0.3s ease, transform 2s ease;
+}

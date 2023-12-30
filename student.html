@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Operations</title>
+    <link rel="stylesheet" href="studentstyle.css">
+    <script src="student.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Student Management System </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a href="student.html">Student Management</a></li>
+            <li><a href="course.html">Course Management</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Add student</h2>
+            <!-- Form for adding a new student -->
+            <form id="addStudentForm">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+
+                <label for="studentSurname">Student Surname:</label>
+                <input type="text" id="studentSurname" name="studentSurname" required>
+
+                <!-- Button to add a new student -->
+                <button class="hover-effect-btn" type="button" onclick="addStudent()">Add</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Student List</h2>
+            <!-- Input for searching students by name -->
+            <input type="text" id="searchStudentInput" placeholder="Search Student By Name" oninput="displayStudents()">
+            <!-- Container for displaying filtered students -->
+            <div id="filteredStudents"></div>
+        </section>
+
+        <section>
+            <h2>Edit Student</h2>
+            <!-- Form for editing a student's information -->
+            <form id="editStudentForm">
+                <label for="editStudentSelect"> Pick Student :</label>
+                <!-- Dropdown to select a student for editing -->
+                <select id="editStudentSelect" onchange="fillEditForm()"></select>
+
+                <label for="editStudentName">New Name:</label>
+                <input type="text" id="editStudentName" name="editStudentName" required>
+
+                <label for="editStudentSurname">New Surname:</label>
+                <input type="text" id="editStudentSurname" name="editStudentSurname" required>
+
+                <!-- Button to edit a student's information -->
+                <button class="hover-effect-btn" type="button" onclick="editStudent()">Edit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Delete Student</h2>
+            <!-- Form for deleting a student -->
+            <form id="deleteStudentForm">
+                <label for="deleteStudentSelect">Pick Student:</label>
+                <!-- Dropdown to select a student for deletion -->
+                <select id="deleteStudentSelect"></select>
+
+                <!-- Button to delete a student -->
+                <button class="hover-effect-btn" type="button" onclick="deleteStudent()">Delete</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- Copyright information -->
+        <p>&copy; Lecture Management System</p>
+    </footer>
+</body>
+</html>

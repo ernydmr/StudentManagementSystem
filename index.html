@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <!-- this script is about icons it takes icons from web page directly, but we need to implement as script -->
+    <script src="https://kit.fontawesome.com/c19b30ea88.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <!-- reffering the other pages in navigation bar -->
+            <li><a href="#">Main Page</a></li>
+            <li><a href="student.html">Student Management <i class="fa-solid fa-user-pen"></i></a></li>
+            <li><a href="course.html">Course Management<i class="fa-solid fa-book"></i>
+            </a></li>    
+        </ul>
+    </nav>
+    <main>
+        <!-- when we click the icons it reffer to other pages -->
+        <div id="links">
+            <div class="box-item" id="goStudent">
+                <i class="fa-solid fa-user-pen fa-10x"></i>
+                <h1>Student Management</h1>
+            </div>
+            <div class="box-item" id="goCourse">
+                <i class="fa-solid fa-book fa-10x"></i>
+                <h1>Course Management</h1>
+            </div>
+            <div class="box-item" id="goGpa">
+                <i class="fa-solid fa-location-dot fa-10x"></i>
+                <h1>Calculate Gpa</h1>
+            </div>
+        </div>
+        <div id="news">
+            <!-- in this div we can add informations for students -->
+            <div class="news-item">
+                <h2>Important Announcement About Physics Exam</h2>
+                <p>Students who will take the PHYS 1851 General Physics I exam, which will be held on Saturday, November 2, 2023 at 11:30; Your exam location is changed.</p>
+            </div>
+            <div class="news-item">
+                <h2>2023-2024 Fall Semester Midterm Exam Schedule (Updated 15.12.2023)</h2>
+                <p>You can access your midterm program from obs.</p>
+            </div>
+        </div>
+        <div id="pictures">
+            <!-- in this div i added some photos for good visuality -->
+            <div class="picture-item">
+                <img src="/pictures/muh.jpg" alt="Picture 1">
+                <p>Our Faculty</p>
+            </div>
+            <div class="picture-item">
+                <img src="/pictures/uni.jpg" alt="Picture 2">
+                <p>Our Campus</p>
+            </div>
+        </div>
+    </main>
+
+     <!-- footer is always bottom in the page  -->
+    <footer>
+        <p>&copy; Lecture Management System</p>
+        <p>Contact us : msku@msku.edu.tr</p>
+    </footer>
+
+
+    <!-- i dont want to open js file for just 2 listener so i wrote in here normally i would write in index.js -->
+    <script>
+        // window.location.href is used to navigate to the target page
+        document.getElementById('goStudent').addEventListener('click', function() {
+            window.location.href = 'student.html';
+        });
+
+        document.getElementById('goCourse').addEventListener('click', function() {
+            window.location.href = 'course.html';
+        });
+        document.getElementById('goGpa').addEventListener('click', function() {
+        window.location.href = 'course.html#gpaCalculatorContainer';
+    });
+    </script>
+</body>
+</html>

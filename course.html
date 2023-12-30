@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="coursestyle.css">
+    <script src="course.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="student.html">Student Management</a></li>
+            <li><a href="course.html">Course Management</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <!-- Add Course Section -->
+        <section>
+            <h2>Add Course</h2>
+            <form id="addLectureForm">
+                <!-- Input fields for Course ID, Course Name, and Course Credit -->
+                <label for="lectureID">Course ID:</label>
+                <input type="text" id="lectureID" name="lectureID" required>
+
+                <label for="lectureName">Course Name:</label>
+                <input type="text" id="lectureName" name="lectureName" required>
+
+                <label for="lectureCredit">Course Credit:</label>
+                <input type="number" id="lectureCredit" name="lectureCredit" required>
+
+                <!-- Button to add a new course -->
+                <button type="button" onclick="addLecture()">Add</button>
+            </form>
+        </section>
+
+        <!-- Delete Course Section -->
+        <section>
+            <h2>Delete Course</h2>
+            <form id="deleteLectureForm">
+                <!-- Dropdown to select a course for deletion -->
+                <label for="selectLectureToDelete">Pick the course you want to delete:</label>
+                <select id="selectLectureToDelete" name="selectLectureToDelete"></select>
+        
+                <!-- Button to delete the selected course -->
+                <button type="button" onclick="deleteLecture()">Delete</button>
+            </form>
+        </section>
+
+        <!-- List of Courses Section -->
+        <section>
+            <h2>List of Courses</h2>
+            <div class="courseListContainer">
+                <!-- Table to display the list of courses -->
+                <table id="courseTable">
+                    <thead>
+                        <tr>
+                            <th>Course ID</th>
+                            <th>Course Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courseTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Add Student and Grades to Course Section -->
+        <section>
+            <h2>Add Student and Grades to Course</h2>
+            <form id="addStudentGradeForm">
+                <!-- Dropdowns to select a course and a student -->
+                <label for="selectLectureForAdd">Pick Course:</label>
+                <select class="selectLecture" id="selectLectureForAdd" name="selectLecture"></select>
+
+                <label for="selectStudent">Pick Student:</label>
+                <select id="selectStudent" name="selectStudent"></select>
+
+                <!-- Input fields for Midterm Grade and Final Grade -->
+                <label for="midtermGrade">Midterm Grade:</label>
+                <input type="number" id="midtermGrade" name="midtermGrade" required>
+
+                <label for="finalGrade">Final Grade:</label>
+                <input type="number" id="finalGrade" name="finalGrade" required>
+
+                <!-- Button to add grades for a student in a course -->
+                <button type="button" onclick="addStudentGrade()">Add</button>
+            </form>
+        </section>
+
+        <!-- List Students in a Course Section -->
+        <section>
+            <!-- Dropdown to select a course for listing students -->
+            <label for="selectLectureForList">Pick Course:</label>
+            <select class="selectLecture" id="selectLectureForList" name="selectLecture"></select>
+
+            <!-- Dropdown to select a grading system (7 or 10) -->
+            <label for="gradeSystemInput">Pick Grading System (7 or 10):</label>
+            <select id="gradeSystemInput" name="gradeSystemInput" required>
+                <option value="7" selected>7</option>
+                <option value="10">10</option>
+            </select>
+
+            <!-- Button to trigger listing students for the selected course -->
+            <button type="button" class="listButton" onclick="listSelectedCourseStudents()">List</button>
+
+            <!-- Input field for filtering students by name -->
+            <label for="studentNameFilter">Filter by Student Name:</label>
+            <input type="text" id="studentNameFilter" oninput="listSelectedCourseStudents()">
+
+            <!-- Container for the list of students in a course -->
+            <div class="studentListContainer">
+                <h3>List of Students in Course</h3>
+                <!-- Table to display the list of students in a course -->
+                <div class="studentList">
+                    <table id="enrollmentTable">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Full Name</th>
+                                <th>Midterm Grade</th>
+                                <th>Final Grade</th>
+                                <th>Total Grade</th>
+                                <th>Letter Grade</th>
+                                <th>Passed?</th>
+                                <th>Change Grades</th>
+                                <th>Delete Student</th>
+                            </tr>
+                        </thead>
+                        <tbody id="enrollmentTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="gpaCalculatorContainer">
+                <h1>GPA CALCULATOR</h1>
+                <!-- Dropdown to select a student for GPA calculation -->
+                <label for="selectStudentGPA">Pick Student:</label>
+                <select id="selectStudentGPA" name="selectStudent"></select>
+            
+                <!-- Dropdown to select a grading system for GPA calculation -->
+                <label for="gradeSystemGPA">Pick Grading System (7 or 10):</label>
+                <select id="gradeSystemGPA" name="gradeSystemGPA" required>
+                    <option value="7" selected>7</option>
+                    <option value="10">10</option>
+                </select>
+            
+                <!-- Button to trigger GPA calculation -->
+                <button type="button" onclick="calculateWeightedGPA()">Calculate Weighted GPA</button>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <!-- Copyright information -->
+        <p>&copy; Lecture Management System</p>
+    </footer>
+</body>
+</html>

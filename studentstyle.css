@@ -1,0 +1,149 @@
+/* General Style - Global styling for the entire document */
+body {
+    font-family: 'Arial', sans-serif; /* Set the font family for the document */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EEF5FF; /* Set the background color for the body */
+}
+
+/* Section Styles - Shared styling for header, navigation, main content, and footer */
+header, nav, main, footer {
+    margin: 20px;
+    background-color: #F5F5F5; /* Light grey background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+/* Header Style - Styling for the header section */
+header {
+    text-align: center;
+    background-color: #176B87; /* Dark blue header background */
+    color: #fff; /* White text color */
+    padding: 10px;
+}
+
+/* Navigation Style - Styling for the navigation bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #176B87; /* Dark blue navigation background */
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    background-color: #FFA500; /* Orange hover background color */
+    color: black;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5); /* Add a shadow on hover */
+    transform: scale(1.1) rotate(1deg); /* Scale and rotate on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transition effect */
+}
+
+/* Main Style - Styling for the main content */
+main {
+    padding: 20px;
+}
+
+/* Section Style - Styling for individual sections within the main content */
+section {
+    margin-bottom: 20px;
+}
+
+/* Form Styles - Styling for forms in the document */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    background-color: #808080; /* Grey button color */
+    color: #fff; /* White text color */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #696969; /* Darker grey color on hover */
+}
+
+/* List Styles - Styling for unordered lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Table Styles - Styling for tables */
+#filteredStudents table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#filteredStudents th, #filteredStudents td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#filteredStudents th {
+    background-color: #176B87; /* Dark blue menu color */
+    color: #fff; /* White text color */
+}
+
+#filteredStudents tr:hover {
+    background-color: #FFA500; /* Orange hover background color */
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5); /* Add shadow on hover */
+    transform: scale(1.05); /* Slight magnification effect on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transition effect */
+}
+
+/* Footer Style - Styling for the footer section */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #176B87; /* Dark blue footer background */
+    color: #fff; /* White text color */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Responsive Design - Media query for responsive design on smaller screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Hover Effect Button - Styling for buttons with hover effect */
+.hover-effect-btn:hover {
+    background-color: #FFA500; /* Orange hover background color */
+    color: black;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5); /* Add shadow on hover */
+    transform: scale(1.1); /* Scale on hover */
+}
