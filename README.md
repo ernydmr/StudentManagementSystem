@@ -7,7 +7,7 @@ I created a student object and the constructor is => constructor(id, name, surna
 and i have a course object and the constructor is => constructor(id, name, credit, enroll)
 Enroll is an array and keeps student data in course.
 Everything happens in local storage, every function updates local storage and take datas from local storage.
-If student and course datas will be empty, dom function will creates initial datas.
+If student and course datas will be empty, dom function will creates initial datas.( For automatic enrollment we need to go student page first then course, because it takes to course student, if we didnt open student page there will be no student so there will be no enrollment.)
 
 <h1># Student Functions</h1>
 
