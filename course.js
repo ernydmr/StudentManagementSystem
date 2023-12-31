@@ -425,12 +425,12 @@ function listSelectedCourseStudents() {
     // Create table body
     const tbody = document.createElement("tbody");
 
-    // Kontrol ekle: Derste öğrenci yoksa mesajı göster
+    // If there is no student in course send a message
     if (selectedCourse.enroll.length === 0) {
         const noStudentRow = document.createElement("tr");
         const noStudentCell = document.createElement("td");
-        noStudentCell.colSpan = 9; // Tüm sütunları kapla
-        noStudentCell.textContent = "Bu derste henüz öğrenci yok.";
+        noStudentCell.colSpan = 9; // close all columns
+        noStudentCell.textContent = "There is no student in this course.";
         noStudentRow.appendChild(noStudentCell);
         tbody.appendChild(noStudentRow);
     } else {
@@ -438,13 +438,13 @@ function listSelectedCourseStudents() {
         let failedCount = 0;
         let totalScore = 0;
 
-        // Seçilen derse kayıtlı öğrencileri listele
+        // List the students
         selectedCourse.enroll.forEach(enrollment => {
-            // Notu hesapla
+            // Calculate grade
             const totalGrade = calculateTotalGrade(enrollment.midterm_grade, enrollment.final_grade);
             const letterGrade = calculateLetterGrade(totalGrade, gradeSystem);
 
-            // Toplam puanı güncelle
+            // Update totalscore
             totalScore += parseFloat(totalGrade);
 
             // Check if the student name matches the filter
@@ -512,10 +512,10 @@ function listSelectedCourseStudents() {
     const selectedCourseLabel = document.querySelector("#selectLectureForList + label");
     selectedCourseLabel.textContent = `Name of the course listed below :  ${selectedCourse.course_name}`;
 
-    // Öğrenci listesini göster
+    // Shows the students list.
     studentListContainer.style.display = "block";
 
-    // Seçilen dersin öğrenci listesini güncelle
+    // Update to student list for selected course.
     updateSelectStudentForListForm();
 }
 
