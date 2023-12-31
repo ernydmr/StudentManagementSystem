@@ -86,7 +86,7 @@ function enrollStudentsAutomatically() {
         const enrolledStudentNames = []; // Names of students already enrolled in this course
 
         // Enroll 25 students for each course
-        for (let i = 1; i <= 25; i++) {
+        for (let i = 1; i <= 75; i++) {
             let studentData;
 
             do {
