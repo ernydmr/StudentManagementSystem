@@ -1,5 +1,6 @@
-"# StudentManagementSystem" 
+"# StudentManagementSystem"
 
+### https://ernydmr.github.io/StudentManagementSystem/
 In the code, I explained everything.
 <h1>To summarize in basic terms:</h1>
 I created a student object and the constructor is => constructor(id, name, surname)
@@ -7,8 +8,9 @@ and i have a course object and the constructor is => constructor(id, name, credi
 Enroll is an array and keeps student data in course.
 Everything happens in local storage, every function updates local storage and take datas from local storage.
 If student and course datas will be empty, dom function will creates initial datas.
+<h3> (For automatic enrollment we need to open student page first then course page, because it takes to course student, if we didnt open student page there will be no student so there will be no enrollment.)</h3>
 
-<h1>## Student Functions</h1>
+<h1># Student Functions</h1>
 
 - Adding
 - Deleting
@@ -16,7 +18,7 @@ If student and course datas will be empty, dom function will creates initial dat
 - Listing
 - Filtering Students
 
-<h1>## Course Functions</h1>
+<h1># Course Functions</h1>
 
 - Adding
 - Deleting
