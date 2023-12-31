@@ -28,3 +28,11 @@ If student and course datas will be empty, dom function will creates initial dat
 - GPA calculator for different grading scales
 
 ---
+
+![Screenshot_3](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/fa1f3574-246c-4aaf-9c33-61d396be7037)
+![Screenshot_4](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/7cfa53aa-5c06-40ac-81a8-37761efe7360)
+![Screenshot_5](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/910618d1-7c90-4678-a1ba-24bc000f406a)
+![Screenshot_6](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/627ed325-006d-4f2a-8503-ff07dfff1f2a)
+![Screenshot_7](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/7093c96b-c1e8-4ff0-a112-14292b8b1d57)
+![Screenshot_8](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/4e521078-1d55-4f36-83a8-b1e7043b59d8)
+![Screenshot_9](https://github.com/ernydmr/StudentManagementSystem/assets/88434027/c4efebe3-d7f6-4c68-b5c5-069f10b62775)
