@@ -1,7 +1,6 @@
-"# StudentManagementSystem"
+# README
 
 ### https://ernydmr.github.io/StudentManagementSystem/
-In the code, I explained everything.
 <h1>To summarize in basic terms:</h1>
 I created a student object and the constructor is => constructor(id, name, surname)
 and i have a course object and the constructor is => constructor(id, name, credit, enroll)
